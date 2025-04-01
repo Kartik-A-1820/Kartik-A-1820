@@ -6,7 +6,7 @@
 
 I'm a Machine Learning Engineer with close to 2 years of experience, currently working remotely at a startup. My focus is on building deep learning pipelines for **image classification**, **object detection**, and **real-time inference** using frameworks like TensorFlow and PyTorch.
 
-My work includes building models for **fish freshness classification**, optimizing inference using **OpenVINO**, and developing internal tools for **dataset annotation** and **multimodal search**. I enjoy learning by doing and frequently explore areas like **multimodal AI**, **transformers**, and **model deployment**.
+My work includes building models for **Seafood freshness classification**, optimizing inference using **OpenVINO**, and developing internal tools for **dataset annotation** and **multimodal search**. I enjoy learning by doing and frequently explore areas like **multimodal AI**, **transformers**, and **model deployment**.
 
 ---
 
