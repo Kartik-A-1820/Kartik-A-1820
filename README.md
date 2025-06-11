@@ -22,6 +22,14 @@ My work includes building models for **Seafood freshness classification**, optim
 
 ## 💼 Projects
 
+### 🧠 [RAG System with Gemma-3](https://github.com/Kartik-A-1820/RAG-GEMMA3)  
+A full-stack **Retrieval-Augmented Generation (RAG)** pipeline using **Google's Gemma-3 LLM**, LangChain, and ChromaDB.  
+✅ FastAPI backend + Streamlit frontend  
+✅ Supports PDF/TXT/DOCX/CSV ingestion, semantic QA, and document summarization  
+✅ Offers quantized inference (4-bit) and one-click launcher
+
+---
+
 ### 🎯 [Smart Polygon Annotator](https://github.com/Kartik-A-1820/SmartAnnotator)
 A GUI-based tool for polygon mask annotation using **Segment Anything (SAM)** and OpenCV.  
 ✅ Export support for YOLOv8 format  
