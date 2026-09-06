@@ -1,103 +1,135 @@
-# 👋 Hey, I'm Kartik Anagawadi
+# Hi, I'm Kartik Anagawadi
 
-🚀 **Machine Learning Engineer** | 🧠 **AI/ML Explorer**
+**AI/ML Engineer** focused on local-first LLM systems, computer vision, retrieval engineering, and practical model deployment.
 
----
-
-I'm a Machine Learning Engineer with close to 2 years of experience, currently working remotely at a startup. My focus is on building deep learning pipelines for **image classification**, **object detection**, and **real-time inference** using frameworks like TensorFlow and PyTorch.
-
-My work includes building models for **Seafood freshness classification**, optimizing inference using **OpenVINO**, and developing internal tools for **dataset annotation** and **multimodal search**. I enjoy learning by doing and frequently explore areas like **multimodal AI**, **transformers**, and **model deployment**.
+I have 2+ years of hands-on experience building ML pipelines for image classification, object detection, real-time inference, dataset tooling, and retrieval-based applications. My current portfolio is moving deeper into senior-level AI engineering: local RAG, hybrid retrieval, evaluation, multimodal search, model optimization, and production-style APIs that run without paid LLM APIs.
 
 ---
 
-## 🧰 What I’ve Worked On
+## What I Build
 
-- 🐟 Built CNN-based models for **fish freshness prediction** with up to 90% accuracy on real-world images.
-- ⚡ Optimized deep learning inference using **Intel OpenVINO**, achieving 4x speedups on Intel hardware.
-- 📦 Developed tools for **object segmentation and YOLOv8 dataset export** to accelerate dataset creation.
-- 🔍 Implemented a **multimodal search engine** using CLIP and FAISS for text-to-image and image-to-image retrieval.
-- ☁️ Deployed ML models using **FastAPI** and **Django REST APIs**, integrated with **AWS EC2, S3, and RDS**.
-
----
-
-## 💼 Projects
-
-### 🧠 [RAG System with Gemma-3](https://github.com/Kartik-A-1820/RAG-GEMMA3)  
-A full-stack **Retrieval-Augmented Generation (RAG)** pipeline using **Google's Gemma-3 LLM**, LangChain, and ChromaDB.  
-✅ FastAPI backend + Streamlit frontend  
-✅ Supports PDF/TXT/DOCX/CSV ingestion, semantic QA, and document summarization  
-✅ Offers quantized inference (4-bit) and one-click launcher
+- Local-first LLM and RAG systems using Gemma, Hugging Face Transformers, LangChain, Chroma, BM25, and FastAPI
+- Computer vision pipelines for classification, object detection, segmentation, and dataset preparation
+- Model optimization workflows using OpenVINO, quantization-aware deployment patterns, and efficient inference
+- Multimodal search systems using CLIP, FAISS, image embeddings, and text-image retrieval
+- Developer-facing AI tools with Streamlit, REST APIs, Docker-friendly configs, and reproducible local setup
 
 ---
 
-### 🎯 [Smart Polygon Annotator](https://github.com/Kartik-A-1820/SmartAnnotator)
-A GUI-based tool for polygon mask annotation using **Segment Anything (SAM)** and OpenCV.  
-✅ Export support for YOLOv8 format  
-✅ Undo/Redo, zoom, color-coded masks  
-✅ Built with PyTorch, Tkinter, and image processing tools  
+## Featured Projects
+
+### [Local Hybrid GraphRAG with Gemma-3](https://github.com/Kartik-A-1820/RAG-GEMMA3)
+
+Flagship local AI project: a zero-paid-API RAG platform upgraded from a basic vector RAG system into a hybrid retrieval foundation suitable for a Senior AI/ML portfolio.
+
+- FastAPI backend and Streamlit frontend
+- Modular PDF, TXT, DOCX, and CSV ingestion
+- Dense retrieval with Chroma and SentenceTransformers
+- Sparse retrieval with in-repo BM25
+- Reciprocal-rank fusion across dense and sparse results
+- Pluggable reranker interface with optional local CrossEncoder
+- Lazy local Gemma-3 loading with 4-bit and CPU-offload friendly configuration
+- Retrieval evaluation scaffolding with Recall@K, Precision@K, and MRR
+- Docker-friendly local config for laptop-class hardware
+
+Next direction: add entity/relation extraction, a lightweight knowledge graph layer, graph traversal retrieval, and GraphRAG-style citations.
 
 ---
 
-### 🔎 [Multimodal AI - Image & Text Search](https://github.com/Kartik-A-1820/multimodal_ai)
-Built a simple multimodal search engine using **CLIP** and **FAISS** for image-text retrieval.  
-✅ Supports image-to-image and text-to-image search  
-✅ Optimized retrieval speed with FAISS indexing  
-✅ FastAPI backend + Streamlit frontend  
+### [Smart Polygon Annotator](https://github.com/Kartik-A-1820/SmartAnnotator)
+
+Computer vision annotation tool for polygon mask creation using Segment Anything and OpenCV.
+
+- Supports YOLOv8 export
+- Includes undo/redo, zoom, and color-coded masks
+- Speeds up custom dataset creation for object detection and segmentation
+- Built with PyTorch, Tkinter, and image processing utilities
 
 ---
 
-### 🖼️ [Image Captioning Model](https://github.com/Kartik-A-1820/image_caption)
-An image captioning project using **DenseNet201 for feature extraction** and a **Bi-LSTM + Self-Attention** decoder.  
-✅ Trained on Flickr8k dataset  
-✅ Generates captions with contextual awareness  
-✅ Deployed as a REST API  
+### [Multimodal AI - Image & Text Search](https://github.com/Kartik-A-1820/multimodal_ai)
+
+Multimodal retrieval application using CLIP and FAISS for image-to-image and text-to-image search.
+
+- Embedding-based search across visual and text queries
+- FAISS indexing for efficient local retrieval
+- FastAPI backend and Streamlit interface
+- Practical foundation for visual search, dataset exploration, and media retrieval
 
 ---
 
-## 🧠 Skills & Tools
+### [Image Captioning Model](https://github.com/Kartik-A-1820/image_caption)
 
-**Languages & Frameworks**  
-`Python` `FastAPI` `Django` `SQL` `Git`
+Image captioning project using DenseNet201 feature extraction with a Bi-LSTM and self-attention decoder.
 
-**ML & Deep Learning**  
-`TensorFlow` `PyTorch` `Scikit-learn` `OpenCV`  
-`CNNs` `RNNs` `Bi-LSTM` `Self-Attention` `Transformers`
-
-**Deployment & Optimization**  
-`Intel OpenVINO` `Docker` `AWS (EC2, S3, RDS)` `Streamlit`  
-`Hugging Face Spaces` `REST API Development`
+- Trained on Flickr8k
+- Generates contextual image captions
+- Exposed through a REST API
+- Demonstrates sequence modeling, attention, and vision-language foundations
 
 ---
 
-## 🎓 Education
+## Experience Highlights
 
-**B.E. in Electronics & Communication Engineering**  
-Basaveshwar Engineering College, Karnataka – CGPA: 8.6 (2018 – 2022)
-
----
-
-## 📜 Certifications
-
-- **Machine Learning & Deep Learning Masters** – iNeuron  
-- **Python for Data Science** – NPTEL
+- Built CNN-based seafood freshness classification models with strong real-world image performance
+- Optimized inference using Intel OpenVINO, improving speed on Intel hardware
+- Developed internal tools for annotation, segmentation workflows, and YOLO dataset export
+- Built multimodal retrieval flows with CLIP and FAISS
+- Deployed ML systems with FastAPI, Django REST APIs, Docker, and cloud infrastructure when required
+- Currently expanding into local LLM systems, retrieval evaluation, GraphRAG, and LLMOps-style workflows
 
 ---
 
-## 🌱 Currently Exploring
+## Skills
 
-- Transformers & LLMs  
-- Retrieval-Augmented Generation (RAG)  
-- Multimodal Learning & Edge AI  
-- Tools to speed up AI experimentation  
+**Languages and Backend**
+`Python` `SQL` `FastAPI` `Django REST Framework` `Git` `Docker`
+
+**Machine Learning and Deep Learning**
+`PyTorch` `TensorFlow` `Scikit-learn` `OpenCV` `CNNs` `Transformers` `Self-Attention`
+
+**LLMs and Retrieval**
+`Gemma` `Hugging Face Transformers` `LangChain` `ChromaDB` `FAISS` `BM25` `RAG` `Hybrid Retrieval`
+
+**Computer Vision**
+`Image Classification` `Object Detection` `Segmentation` `YOLOv8` `Segment Anything` `CLIP`
+
+**Deployment and Optimization**
+`OpenVINO` `Streamlit` `REST APIs` `Quantization` `Local Inference` `AWS EC2/S3/RDS`
 
 ---
 
-## 📫 Let's Connect
+## Currently Exploring
 
-📧 anagawadi.kartik@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/kartik-anagawadi-4b33a81b6/)  
-🔗 [GitHub](https://github.com/Kartik-A-1820)
+- Hybrid GraphRAG and knowledge-graph assisted retrieval
+- Local LLM deployment on constrained hardware
+- Retrieval evaluation and observability
+- Multi-agent AI workspaces
+- LLMOps and model quality automation
 
 ---
 
-_"Always building. Always learning."_  
+## Education
+
+**B.E. in Electronics & Communication Engineering**
+Basaveshwar Engineering College, Karnataka
+CGPA: 8.6, 2018-2022
+
+---
+
+## Certifications
+
+- Machine Learning & Deep Learning Masters - iNeuron
+- Python for Data Science - NPTEL
+
+---
+
+## Connect
+
+Email: anagawadi.kartik@gmail.com
+LinkedIn: [kartik-anagawadi-4b33a81b6](https://www.linkedin.com/in/kartik-anagawadi-4b33a81b6/)
+GitHub: [Kartik-A-1820](https://github.com/Kartik-A-1820)
+
+---
+
+Always building. Always learning. Always moving closer to production-grade AI.
