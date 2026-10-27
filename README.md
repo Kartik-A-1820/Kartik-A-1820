@@ -1,135 +1,96 @@
 # Hi, I'm Kartik Anagawadi
 
-**AI/ML Engineer** focused on local-first LLM systems, computer vision, retrieval engineering, and practical model deployment.
+**AI/ML Engineer | LLM systems · Computer vision · Retrieval · Efficient inference**
 
-I have 2+ years of hands-on experience building ML pipelines for image classification, object detection, real-time inference, dataset tooling, and retrieval-based applications. My current portfolio is moving deeper into senior-level AI engineering: local RAG, hybrid retrieval, evaluation, multimodal search, model optimization, and production-style APIs that run without paid LLM APIs.
+Building ML systems professionally since **March 2023**. I work across model development, data pipelines, APIs, and deployment, with a particular interest in making useful AI run on constrained hardware.
 
----
+My projects explore local GraphRAG, speculative decoding, detection and segmentation, reinforcement learning, and low-VRAM model workflows. I publish implementations, experiments, and limitations so the engineering decisions can be inspected.
 
-## What I Build
+[LinkedIn](https://www.linkedin.com/in/kartik-anagawadi-4b33a81b6/) · [Email](mailto:anagawadi.kartik@gmail.com)
 
-- Local-first LLM and RAG systems using Gemma, Hugging Face Transformers, LangChain, Chroma, BM25, and FastAPI
-- Computer vision pipelines for classification, object detection, segmentation, and dataset preparation
-- Model optimization workflows using OpenVINO, quantization-aware deployment patterns, and efficient inference
-- Multimodal search systems using CLIP, FAISS, image embeddings, and text-image retrieval
-- Developer-facing AI tools with Streamlit, REST APIs, Docker-friendly configs, and reproducible local setup
+## Featured repositories
 
----
+### [Qwen-GraphRAG](https://github.com/Kartik-A-1820/Qwen-GraphRAG) — Local document intelligence
 
-## Featured Projects
+A local document question-answering platform combining **dense retrieval, BM25, and a Kuzu knowledge graph**.
 
-### [Local Hybrid GraphRAG with Gemma-3](https://github.com/Kartik-A-1820/RAG-GEMMA3)
+- Typed entity/relation extraction with a rule-based fallback, reciprocal-rank fusion, and optional reranking.
+- FastAPI backend, Streamlit graph/monitoring dashboard, multi-format ingestion, and retrieval evaluation utilities.
+- Configurable small-model and 4-bit inference paths for laptop-class hardware.
 
-Flagship local AI project: a zero-paid-API RAG platform upgraded from a basic vector RAG system into a hybrid retrieval foundation suitable for a Senior AI/ML portfolio.
+**Explore:** [Retrieval implementation](https://github.com/Kartik-A-1820/Qwen-GraphRAG/tree/main/backend/retrieval) · [Tests](https://github.com/Kartik-A-1820/Qwen-GraphRAG/blob/main/tests/test_retrieval.py)
 
-- FastAPI backend and Streamlit frontend
-- Modular PDF, TXT, DOCX, and CSV ingestion
-- Dense retrieval with Chroma and SentenceTransformers
-- Sparse retrieval with in-repo BM25
-- Reciprocal-rank fusion across dense and sparse results
-- Pluggable reranker interface with optional local CrossEncoder
-- Lazy local Gemma-3 loading with 4-bit and CPU-offload friendly configuration
-- Retrieval evaluation scaffolding with Recall@K, Precision@K, and MRR
-- Docker-friendly local config for laptop-class hardware
+### [specbench](https://github.com/Kartik-A-1820/specbench) — Speculative decoding on a 4 GB GPU
 
-Next direction: add entity/relation extraction, a lightweight knowledge graph layer, graph traversal retrieval, and GraphRAG-style citations.
+An inference experiment with paired benchmarks, correctness tests, KV-cache rollback, and a trained EAGLE-style draft head.
 
----
+- Published sampling result: **1.321× speedup** with a **95% bootstrap CI of 1.235–1.406**, over 29 scored prompts on a GTX 1650 Ti.
+- Reports the negative result too: the trained draft head reached **0.938×**, with diagnosis and limitations.
 
-### [Smart Polygon Annotator](https://github.com/Kartik-A-1820/SmartAnnotator)
+**Explore:** [Results](https://github.com/Kartik-A-1820/specbench/blob/main/docs/results.md) · [Methodology](https://github.com/Kartik-A-1820/specbench/blob/main/docs/methodology.md) · [Correctness tests](https://github.com/Kartik-A-1820/specbench/tree/main/tests)
 
-Computer vision annotation tool for polygon mask creation using Segment Anything and OpenCV.
+### [detektor](https://github.com/Kartik-A-1820/detektor) — Detection and segmentation framework
 
-- Supports YOLOv8 export
-- Includes undo/redo, zoom, and color-coded masks
-- Speeds up custom dataset creation for object detection and segmentation
-- Built with PyTorch, Tkinter, and image processing utilities
+A lightweight custom model framework covering training, validation, export, serving, and a web console.
 
----
+- Hardware-aware training, EMA/AMP, ONNX parity checks, reproducible model packaging, and benchmark tooling.
+- Serving includes API-key authentication, upload validation, bounded concurrency, readiness checks, and metrics.
+- **Current focus:** improving real-image model quality. Published CPU/synthetic benchmarks are labeled separately from real-data accuracy.
 
-### [Multimodal AI - Image & Text Search](https://github.com/Kartik-A-1820/multimodal_ai)
+**Explore:** [Architecture](https://github.com/Kartik-A-1820/detektor/blob/main/docs/ARCHITECTURE.md) · [Benchmarks](https://github.com/Kartik-A-1820/detektor/blob/main/docs/BENCHMARKS.md) · [Project status](https://github.com/Kartik-A-1820/detektor/blob/main/docs/status/PROJECT_STATUS.md)
 
-Multimodal retrieval application using CLIP and FAISS for image-to-image and text-to-image search.
+### [snake-rl-from-scratch](https://github.com/Kartik-A-1820/snake-rl-from-scratch) — Reinforcement learning with a browser demo
 
-- Embedding-based search across visual and text queries
-- FAISS indexing for efficient local retrieval
-- FastAPI backend and Streamlit interface
-- Practical foundation for visual search, dataset exploration, and media retrieval
+A hands-on comparison of tabular Q-learning, DQN variants, masked PPO, and a Hamiltonian planning baseline.
 
----
+- Includes training code, pretrained agents, browser inference, parity tests, and experiment notes.
+- Publishes multi-seed ablations where available, failed approaches, hardware profiling, and checkpoint-selection details.
+- Separates learned policies from planning baselines and identifies single-seed results.
 
-### [Image Captioning Model](https://github.com/Kartik-A-1820/image_caption)
+**Explore:** [Browser demo](https://kartik-a-1820.github.io/snake-rl-from-scratch/) · [Training and evaluation code](https://github.com/Kartik-A-1820/snake-rl-from-scratch/tree/main/python)
 
-Image captioning project using DenseNet201 feature extraction with a Bi-LSTM and self-attention decoder.
+## More tools and ongoing work
 
-- Trained on Flickr8k
-- Generates contextual image captions
-- Exposed through a REST API
-- Demonstrates sequence modeling, attention, and vision-language foundations
+| Repository | What it explores | Scope |
+| --- | --- | --- |
+| [VizGen](https://github.com/Kartik-A-1820/VizGen) | Local image generation/editing through React, FastAPI, a SQLite queue, and ComfyUI; staged model loading for low VRAM | Windows/local workflow with published hardware-specific benchmarks |
+| [Nano-LLM Studio](https://github.com/Kartik-A-1820/Nano-LLM-studio) | Small language-model training: corpus collection, tokenizer preparation, architecture selection, training, and checkpoint inference | Local experimental workbench |
+| [ATEAM-NEXT](https://github.com/Kartik-A-1820/ATEAM-NEXT) | TypeScript/Ink agent workspace with event-driven state, persistence, provider adapters, and permission-policy components | In development; simulation and live integration status are documented in the roadmap |
 
----
+## Engineering labs
 
-## Experience Highlights
+[**Projects-ML**](https://github.com/Kartik-A-1820/Projects-ML) contains my AI/ML engineering and data-science labs, alongside earlier notebooks.
 
-- Built CNN-based seafood freshness classification models with strong real-world image performance
-- Optimized inference using Intel OpenVINO, improving speed on Intel hardware
-- Developed internal tools for annotation, segmentation workflows, and YOLO dataset export
-- Built multimodal retrieval flows with CLIP and FAISS
-- Deployed ML systems with FastAPI, Django REST APIs, Docker, and cloud infrastructure when required
-- Currently expanding into local LLM systems, retrieval evaluation, GraphRAG, and LLMOps-style workflows
+- [Weekly AI/ML projects](https://github.com/Kartik-A-1820/Projects-ML/tree/main/weekly-projects) — implementations, tests, and architecture discussions.
+- [Data-science labs](https://github.com/Kartik-A-1820/Projects-ML/tree/main/data-science-labs) — calibration, uncertainty, causal uplift, survival analysis, and other experiments.
+- [ContractTrace: verified agent tool transactions](https://github.com/Kartik-A-1820/Projects-ML/tree/main/weekly-projects/week-37-contracttrace-agent-transactions) — strict action contracts, SQLite transactions, idempotency, fault injection, and final-state verification. The core uses a deterministic planner; local SLM integration is optional.
 
----
+Lab scope varies: synthetic smoke tests, measured model experiments, and proposed production extensions are distinguished in each project's documentation.
 
-## Skills
+## Technical toolkit
 
-**Languages and Backend**
-`Python` `SQL` `FastAPI` `Django REST Framework` `Git` `Docker`
+| Area | Technologies |
+| --- | --- |
+| Languages and APIs | Python, SQL, TypeScript, FastAPI, Django |
+| ML and vision | PyTorch, TensorFlow/Keras, scikit-learn, OpenCV, YOLO, Segment Anything |
+| LLMs and retrieval | Hugging Face Transformers, PEFT/LoRA, LangChain, Qwen, Gemma, Chroma, FAISS, BM25, Kuzu |
+| Inference and deployment | Quantization, OpenVINO, ONNX Runtime, Docker, Streamlit, React, AWS |
 
-**Machine Learning and Deep Learning**
-`PyTorch` `TensorFlow` `Scikit-learn` `OpenCV` `CNNs` `Transformers` `Self-Attention`
+## Professional background
 
-**LLMs and Retrieval**
-`Gemma` `Hugging Face Transformers` `LangChain` `ChromaDB` `FAISS` `BM25` `RAG` `Hybrid Retrieval`
+- ML pipelines for seafood freshness classification and image-based inference.
+- Intel OpenVINO inference optimization and model deployment.
+- Dataset annotation, segmentation tooling, and multimodal retrieval.
+- Backend integration using FastAPI/Django, Docker, and cloud infrastructure.
 
-**Computer Vision**
-`Image Classification` `Object Detection` `Segmentation` `YOLOv8` `Segment Anything` `CLIP`
+## Education and certifications
 
-**Deployment and Optimization**
-`OpenVINO` `Streamlit` `REST APIs` `Quantization` `Local Inference` `AWS EC2/S3/RDS`
+**B.E., Electronics & Communication Engineering** — Basaveshwar Engineering College, Karnataka  
+2018–2022 · CGPA: 8.6
+
+- Machine Learning & Deep Learning Masters — iNeuron
+- Python for Data Science — NPTEL
 
 ---
 
-## Currently Exploring
-
-- Hybrid GraphRAG and knowledge-graph assisted retrieval
-- Local LLM deployment on constrained hardware
-- Retrieval evaluation and observability
-- Multi-agent AI workspaces
-- LLMOps and model quality automation
-
----
-
-## Education
-
-**B.E. in Electronics & Communication Engineering**
-Basaveshwar Engineering College, Karnataka
-CGPA: 8.6, 2018-2022
-
----
-
-## Certifications
-
-- Machine Learning & Deep Learning Masters - iNeuron
-- Python for Data Science - NPTEL
-
----
-
-## Connect
-
-Email: anagawadi.kartik@gmail.com
-LinkedIn: [kartik-anagawadi-4b33a81b6](https://www.linkedin.com/in/kartik-anagawadi-4b33a81b6/)
-GitHub: [Kartik-A-1820](https://github.com/Kartik-A-1820)
-
----
-
-Always building. Always learning. Always moving closer to production-grade AI.
+*Profile refreshed: October 2026. Benchmark figures describe the published repository experiments and their stated hardware/scope.*
